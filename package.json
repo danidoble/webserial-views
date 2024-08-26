@@ -40,5 +40,8 @@
       "import": "./dist/webserial-views.js",
       "require": "./dist/webserial-views.umd.cjs"
     }
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
   }
 }

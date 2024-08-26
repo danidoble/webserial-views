@@ -17,16 +17,7 @@ export function Permissions() {
     }
 
     function showPermissionRequest() {
-        const show = getDisconnectedDevices().length > 0;
-        const prefix = import.meta.env.VITE_PREFIX;
-        const el = document.getElementById(`webserial-${prefix}`);
-        if (show) {
-            el.classList.remove('hidden');
-        } else {
-            el.classList.add('hidden');
-        }
-
-        return show
+        return getDisconnectedDevices().length > 0;
     }
 
     function getDisconnectedDevices() {
@@ -41,8 +32,8 @@ export function Permissions() {
         });
     }
 
-    return <>
-        <div className={`grid place-items-center h-screen ${showPermissionRequest() ? '' : 'hidden'}`}>
+    return <div className={`fixed inset-0 backdrop-blur overflow-auto ${showPermissionRequest() ? '' : 'hidden'}`}>
+        <div className="relative grid place-items-center h-screen">
             <div className="w-full max-w-xl mx-auto text-center p-4">
                 <h4 className="text-xl sm:text-3xl font-semibold uppercase mb-6">Webserial permission request</h4>
 
@@ -93,5 +84,5 @@ export function Permissions() {
                 </div>
             </div>
         </div>
-    </>
+    </div>
 }
