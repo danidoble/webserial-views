@@ -26,7 +26,7 @@ export function Permissions() {
 
     function handleConnect(device) {
         device.connect().then(() => {
-            console.log('connected');
+            // ...
         }).catch((err) => {
             console.error(err);
         });
