@@ -49,7 +49,7 @@ export function Events() {
     }
 
     return (<>
-        <div className="fixed bottom-4 right-4 grid gap-2">
+        <div className="fixed z-[60] bottom-4 right-4 grid gap-2">
             {alerts.map((alert, index) => (
                 <Alert key={index} message={alert.message} type={alert.type}/>
             ))}
