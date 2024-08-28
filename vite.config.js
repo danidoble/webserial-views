@@ -30,6 +30,10 @@ export default defineConfig({
                     react: 'React',
                     webserial: 'WebSerial',
                 },
+                assetFileNames: (assetInfo) => {
+                    if (assetInfo.name === 'style.css') return 'webserial-views.css';
+                    return assetInfo.name;
+                }
             },
         },
     },

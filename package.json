@@ -39,6 +39,10 @@
     ".": {
       "import": "./dist/webserial-views.js",
       "require": "./dist/webserial-views.umd.cjs"
+    },
+    "./dist/webserial-views.css": {
+      "import": "./dist/webserial-views.css",
+      "require": "./dist/webserial-views.css"
     }
   },
   "dependencies": {
