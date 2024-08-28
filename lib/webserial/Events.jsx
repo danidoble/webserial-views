@@ -25,6 +25,7 @@ export function Events() {
             if (_to_listen.length > 0) {
                 for (const listener of _to_listen) {
                     device.on(listener.type, () => {
+                        console.log(listener.type);
                         const type = listener.type === 'serial:connected' ? 'alert-success' : listener.type === 'serial:disconnected' ? 'alert-error' : 'alert-info';
                         const message = listener.type === 'serial:connected' ? 'Device connected' : listener.type === 'serial:disconnected' ? 'Device disconnected' : 'Device connecting';
 
@@ -32,7 +33,7 @@ export function Events() {
                         oldAlerts.push({message, type});
                         setAlerts([...oldAlerts]);
 
-                        if(timeout){
+                        if (timeout) {
                             clearTimeout(timeout);
                         }
 
@@ -63,6 +64,7 @@ Alert.propTypes = {
 };
 
 function Alert({message, type}) {
+
     return (
         <div role="alert" className={`alert ${type}`}>
             <svg
