@@ -9,11 +9,10 @@ export function Events() {
 
     let timeout = 0;
 
-    Devices.instance.on('change', () => {
-        poolDevices();
-    });
-
     useEffect(() => {
+        Devices.instance.on('change', () => {
+            poolDevices();
+        });
         poolDevices();
     }, []);
 
@@ -25,9 +24,9 @@ export function Events() {
             if (_to_listen.length > 0) {
                 for (const listener of _to_listen) {
                     device.on(listener.type, () => {
-                        console.log(listener.type);
                         const type = listener.type === 'serial:connected' ? 'alert-success' : listener.type === 'serial:disconnected' ? 'alert-error' : 'alert-info';
                         const message = listener.type === 'serial:connected' ? 'Device connected' : listener.type === 'serial:disconnected' ? 'Device disconnected' : 'Device connecting';
+
 
                         const oldAlerts = [...alerts];
                         oldAlerts.push({message, type});
@@ -52,7 +51,7 @@ export function Events() {
     return (<>
         <div className="fixed z-[60] bottom-4 right-4 grid gap-2">
             {alerts.map((alert, index) => (
-                <Alert key={index} message={alert.message} type={alert.type}/>
+                <Alert key={`alert-ws-${index}`} message={alert.message} type={alert.type}/>
             ))}
         </div>
     </>);
@@ -64,7 +63,6 @@ Alert.propTypes = {
 };
 
 function Alert({message, type}) {
-
     return (
         <div role="alert" className={`alert ${type}`}>
             <svg
