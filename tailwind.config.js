@@ -13,7 +13,8 @@ export default {
         daisyui
     ],
     daisyui: {
-        themes: ["light", "dark"]
+        themes: ["emerald", "sunset"]
     },
+    darkMode: ['class', '[data-theme="sunset"]'],
 }
 
