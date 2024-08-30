@@ -18,7 +18,7 @@ export function Unsupported() {
 
     return (<>
         <div
-            className={`fixed inset-0 backdrop-blur overflow-auto z-10 p-2 bg-rose-700/10 ${showUnsupported() ? '' : 'hidden'}`}>
+            className={`fixed inset-0 backdrop-blur overflow-auto z-[51] p-2 bg-rose-700/10 ${showUnsupported() ? '' : 'hidden'}`}>
             <div className="grid place-items-center size-full">
                 <div className="w-full max-w-xl">
                     <div className="w-full bg-rose-800 rounded-lg px-4 py-8 text-white">
@@ -42,7 +42,7 @@ export function Unsupported() {
                                     <p className="mt-6 text-sm">
                                         Please check documentation for more information.
                                     </p>
-                                    <p className="mb-6 text-sm">This aplication will not work.</p>
+                                    <p className="mb-6 text-sm">This application will not work.</p>
 
                                 </div> :
                                 <div>
@@ -56,7 +56,7 @@ export function Unsupported() {
                                         &larr;
                                     </p>
                                     <p className="mt-6 text-base">
-                                        Otherwise this aplication will not work.
+                                        Otherwise this application will not work.
                                     </p>
                                 </div>
                             }

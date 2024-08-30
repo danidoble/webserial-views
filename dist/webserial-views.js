@@ -19729,7 +19729,7 @@ function k_() {
       console.error(ye);
     });
   }
-  return /* @__PURE__ */ Ve.jsx("div", { className: `fixed inset-0 backdrop-blur overflow-auto ${Se() ? "" : "hidden"}`, children: /* @__PURE__ */ Ve.jsx("div", { className: "relative grid place-items-center h-screen", children: /* @__PURE__ */ Ve.jsxs("div", { className: "w-full max-w-xl mx-auto text-center p-4", children: [
+  return /* @__PURE__ */ Ve.jsx("div", { className: `fixed z-50 inset-0 backdrop-blur overflow-auto ${Se() ? "" : "hidden"}`, children: /* @__PURE__ */ Ve.jsx("div", { className: "relative grid place-items-center h-screen", children: /* @__PURE__ */ Ve.jsxs("div", { className: "w-full max-w-xl mx-auto text-center p-4", children: [
     /* @__PURE__ */ Ve.jsx("h4", { className: "text-xl sm:text-3xl font-semibold uppercase mb-6", children: "Webserial permission request" }),
     /* @__PURE__ */ Ve.jsxs("div", { role: "alert", className: "mt-2 alert shadow-lg", children: [
       /* @__PURE__ */ Ve.jsx(
@@ -19780,7 +19780,7 @@ function O_() {
   return /* @__PURE__ */ Ve.jsx(Ve.Fragment, { children: /* @__PURE__ */ Ve.jsx(
     "div",
     {
-      className: `fixed inset-0 backdrop-blur overflow-auto z-10 p-2 bg-rose-700/10 ${_() ? "" : "hidden"}`,
+      className: `fixed inset-0 backdrop-blur overflow-auto z-[51] p-2 bg-rose-700/10 ${_() ? "" : "hidden"}`,
       children: /* @__PURE__ */ Ve.jsx("div", { className: "grid place-items-center size-full", children: /* @__PURE__ */ Ve.jsx("div", { className: "w-full max-w-xl", children: /* @__PURE__ */ Ve.jsxs("div", { className: "w-full bg-rose-800 rounded-lg px-4 py-8 text-white", children: [
         /* @__PURE__ */ Ve.jsx("div", { className: "w-full inline-flex justify-center", children: /* @__PURE__ */ Ve.jsx(
           "svg",
@@ -19803,7 +19803,7 @@ function O_() {
         /* @__PURE__ */ Ve.jsx("div", { className: "text-center text-2xl", children: z ? /* @__PURE__ */ Ve.jsxs("div", { className: "", children: [
           /* @__PURE__ */ Ve.jsx("p", { children: "Webserial is not available in this browser." }),
           /* @__PURE__ */ Ve.jsx("p", { className: "mt-6 text-sm", children: "Please check documentation for more information." }),
-          /* @__PURE__ */ Ve.jsx("p", { className: "mb-6 text-sm", children: "This aplication will not work." })
+          /* @__PURE__ */ Ve.jsx("p", { className: "mb-6 text-sm", children: "This application will not work." })
         ] }) : /* @__PURE__ */ Ve.jsxs("div", { children: [
           /* @__PURE__ */ Ve.jsx("p", { children: "Webserial need a secure connection (https)" }),
           /* @__PURE__ */ Ve.jsxs("p", { className: "inline-flex justify-center items-center mt-2", children: [
@@ -19813,7 +19813,7 @@ function O_() {
             }, children: "Update connection" }),
             "←"
           ] }),
-          /* @__PURE__ */ Ve.jsx("p", { className: "mt-6 text-base", children: "Otherwise this aplication will not work." })
+          /* @__PURE__ */ Ve.jsx("p", { className: "mt-6 text-base", children: "Otherwise this application will not work." })
         ] }) })
       ] }) }) })
     }

@@ -32,7 +32,7 @@ export function Permissions() {
         });
     }
 
-    return <div className={`fixed inset-0 backdrop-blur overflow-auto ${showPermissionRequest() ? '' : 'hidden'}`}>
+    return <div className={`fixed z-50 inset-0 backdrop-blur overflow-auto ${showPermissionRequest() ? '' : 'hidden'}`}>
         <div className="relative grid place-items-center h-screen">
             <div className="w-full max-w-xl mx-auto text-center p-4">
                 <h4 className="text-xl sm:text-3xl font-semibold uppercase mb-6">Webserial permission request</h4>
