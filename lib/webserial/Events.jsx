@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import {Devices} from "webserial";
 import PropTypes from "prop-types";
+import './events.css'
 
 export function Events() {
     // eslint-disable-next-line no-unused-vars
@@ -24,9 +25,15 @@ export function Events() {
             if (_to_listen.length > 0) {
                 for (const listener of _to_listen) {
                     device.on(listener.type, () => {
-                        const type = listener.type === 'serial:connected' ? 'alert-success' : listener.type === 'serial:disconnected' ? 'alert-error' : 'alert-info';
-                        const message = listener.type === 'serial:connected' ? 'Device connected' : listener.type === 'serial:disconnected' ? 'Device disconnected' : 'Device connecting';
-
+                        let type = 'ws-alert-info';
+                        let message = 'Device connecting';
+                        if (listener.type === 'serial:connected') {
+                            type = 'ws-alert-success';
+                            message = 'Device connected';
+                        } else if (listener.type === 'serial:disconnected') {
+                            type = 'ws-alert-error';
+                            message = 'Device disconnected';
+                        }
 
                         const oldAlerts = [...alerts];
                         oldAlerts.push({message, type});
@@ -64,7 +71,7 @@ Alert.propTypes = {
 
 function Alert({message, type}) {
     return (
-        <div role="alert" className={`alert ${type}`}>
+        <div role="alert" className={`ws-alert ${type}`}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

@@ -1,4 +1,5 @@
 import {utils} from "webserial";
+import './unsupported.css';
 
 export function Unsupported() {
     let isHttps = location.protocol === 'https:';
@@ -18,11 +19,12 @@ export function Unsupported() {
 
     return (<>
         <div
-            className={`fixed inset-0 backdrop-blur overflow-auto z-[51] p-2 bg-rose-700/10 ${showUnsupported() ? '' : 'hidden'}`}>
+            className={`fixed inset-0 backdrop-blur overflow-auto z-[51] p-2 bg-gray-50 dark:bg-neutral-900 border-y-8 border-red-600 dark:border-rose-600 ${showUnsupported() ? '' : 'hidden'}`}>
             <div className="grid place-items-center size-full">
                 <div className="w-full max-w-xl">
-                    <div className="w-full bg-rose-800 rounded-lg px-4 py-8 text-white">
-                        <div className="w-full inline-flex justify-center">
+                    <div
+                        className="w-full bg-white dark:bg-neutral-950 border-b-8 border-red-600 dark:border-rose-600 rounded-lg px-4 py-8 text-black dark:text-white">
+                        <div className="w-full inline-flex justify-center text-red-600">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="size-24 shrink-0 stroke-current"
@@ -47,13 +49,13 @@ export function Unsupported() {
                                 </div> :
                                 <div>
                                     <p>Webserial need a secure connection (https)</p>
-                                    <p className="inline-flex justify-center items-center mt-2">
-                                        &rarr;
-                                        <button className="btn btn-sm btn-ghost text-xl" onClick={() => {
+                                    <p className="mt-2 flex justify-center">
+                                        <button className="ws-btn-link" onClick={() => {
                                             updateProtocol()
-                                        }}>Update connection
+                                        }}>
+                                            Update connection
                                         </button>
-                                        &larr;
+
                                     </p>
                                     <p className="mt-6 text-base">
                                         Otherwise this application will not work.

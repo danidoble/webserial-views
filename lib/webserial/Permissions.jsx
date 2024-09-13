@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 import {Devices} from "webserial";
+import './permissions.css';
 
 export function Permissions() {
     const [devices, setDevices] = useState([]);
@@ -32,39 +33,38 @@ export function Permissions() {
         });
     }
 
-    return <div className={`fixed z-50 inset-0 backdrop-blur overflow-auto ${showPermissionRequest() ? '' : 'hidden'}`}>
+    return <div
+        className={`fixed z-50 inset-0 backdrop-blur overflow-auto bg-white/50 dark:bg-neutral-900/50 ${showPermissionRequest() ? '' : 'hidden'}`}>
         <div className="relative grid place-items-center h-screen">
             <div className="w-full max-w-xl mx-auto text-center p-4">
                 <h4 className="text-xl sm:text-3xl font-semibold uppercase mb-6">Webserial permission request</h4>
 
-                <div role="alert" className="mt-2 alert shadow-lg">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        className="stroke-info h-6 w-6 shrink-0">
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <div>
-                        <h3 className="font-bold">Note</h3>
-                        <div className="text-xs">
-                            To access the serial port, you need to grant permission to the browser.
+                <div role="alert" className="rounded-md bg-gray-50 dark:bg-neutral-900 border-b-4 border-sky-400 dark:border-sky-600 p-4">
+                    <div className="flex">
+                        <div className="flex-shrink-0">
+                            <svg className="size-6 text-gray-700 dark:text-blue-100" xmlns="http://www.w3.org/2000/svg"
+                                 fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round"
+                                      d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"/>
+                            </svg>
+                        </div>
+                        <div className="ml-3 flex-1 text-left">
+                            <p className="text-base font-bold text-gray-800 dark:text-white">Note</p>
+                            <p className="text-sm text-gray-700 dark:text-white">
+                                To access the serial port, you need to grant permission to the browser.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <p className="my-6 text-sm">
+                <p className="my-6 text-base">
                     Here appear the devices missing to work with the application.
                 </p>
                 <div>
                     <ul className="text-left grid grid-cols-1 gap-2">
                         {getDisconnectedDevices().map((device) => {
                             return <li key={device}>
-                                <button className="btn btn-outline btn-neutral capitalize w-full" onClick={() =>
+                                <button className="ws-btn-permission" onClick={() =>
                                     handleConnect(device)
                                 }>
                                     {device.typeDevice} #{device.deviceNumber}
@@ -77,7 +77,7 @@ export function Permissions() {
                     If by some reason the devices are not appearing, please refresh the page.
                 </div>
                 <div className="text-right">
-                    <button className="btn btn-sm btn-outline btn-primary" onClick={() => {
+                    <button className="ws-btn-reload" onClick={() => {
                         location.reload()
                     }}>Refresh
                     </button>

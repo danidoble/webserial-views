@@ -1,4 +1,7 @@
-import daisyui from "daisyui";
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import typography from '@tailwindcss/typography';
+import forms from '@tailwindcss/forms';
+import containerQueries from '@tailwindcss/container-queries';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -10,11 +13,9 @@ export default {
         extend: {},
     },
     plugins: [
-        daisyui
+        aspectRatio,
+        typography,
+        forms,
+        containerQueries,
     ],
-    daisyui: {
-        themes: ["emerald", "sunset"]
-    },
-    darkMode: ['class', '[data-theme="sunset"]'],
 }
-

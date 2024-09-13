@@ -11,6 +11,7 @@ if (typeof document !== 'undefined') {
     if (!container) {
         container = document.createElement('div');
         container.id = `webserial-${prefix}`;
+        container.classList.add('ws-container');
         document.body.append(container);
     }
 

@@ -2,6 +2,7 @@ import {useEffect} from "react";
 import {Permissions} from "./webserial/Permissions.jsx";
 import {Unsupported} from "./webserial/Unsupported.jsx";
 import {Events} from "./webserial/Events.jsx";
+import {utils} from "webserial";
 
 export default function App() {
     useEffect(() => {
@@ -14,9 +15,20 @@ export default function App() {
         }
     }, []);
 
+    let isHttps = location.protocol === 'https:';
+    const support = utils.supportWebSerial();
+
+    if (support && !isHttps) {
+        isHttps = true; // localhost is the only exception
+    }
+
+    function showUnsupported() {
+        return !isHttps || !support;
+    }
+
     return (<>
         <Permissions/>
-        <Unsupported/>
+        {(showUnsupported() ? <Unsupported/> : null)}
         <Events/>
     </>);
 }

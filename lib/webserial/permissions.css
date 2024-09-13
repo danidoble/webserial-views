@@ -1,0 +1,11 @@
+@tailwind components;
+
+@layer components {
+    .ws-btn-permission {
+        @apply rounded-md bg-transparent px-3.5 py-3.5 text-sm font-semibold text-gray-800 dark:text-gray-200 shadow-sm hover:bg-neutral-200 dark:hover:bg-gray-100/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 ring-1 ring-gray-700 dark:ring-gray-300 capitalize w-full
+    }
+
+    .ws-btn-reload {
+        @apply rounded-lg bg-transparent px-2 py-1 text-sm font-semibold text-orange-600 dark:text-orange-500 shadow-sm hover:bg-orange-600 hover:text-orange-50 dark:hover:bg-orange-600 ring-1 ring-orange-600
+    }
+}
