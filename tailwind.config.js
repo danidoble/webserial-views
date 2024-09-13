@@ -1,10 +1,8 @@
-import aspectRatio from '@tailwindcss/aspect-ratio';
-import typography from '@tailwindcss/typography';
-import forms from '@tailwindcss/forms';
-import containerQueries from '@tailwindcss/container-queries';
+const prefix = import.meta.env.VITE_PREFIX ?? 'ws';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+    prefix: `${prefix}-`,
     content: [
         "./index.html",
         "./lib/**/*.{js,ts,jsx,tsx}",
@@ -13,9 +11,6 @@ export default {
         extend: {},
     },
     plugins: [
-        aspectRatio,
-        typography,
-        forms,
-        containerQueries,
+
     ],
 }

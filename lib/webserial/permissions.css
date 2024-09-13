@@ -2,10 +2,10 @@
 
 @layer components {
     .ws-btn-permission {
-        @apply rounded-md bg-transparent px-3.5 py-3.5 text-sm font-semibold text-gray-800 dark:text-gray-200 shadow-sm hover:bg-neutral-200 dark:hover:bg-gray-100/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 ring-1 ring-gray-700 dark:ring-gray-300 capitalize w-full
+        @apply ws-rounded-md ws-bg-transparent ws-px-3.5 ws-py-3.5 ws-text-sm ws-font-semibold ws-text-gray-800 dark:ws-text-gray-200 ws-shadow-sm hover:ws-bg-neutral-200 dark:hover:ws-bg-gray-100/10 focus-visible:ws-outline focus-visible:ws-outline-2 focus-visible:ws-outline-offset-2 focus-visible:ws-outline-gray-600 ws-ring-1 ws-ring-gray-700 dark:ws-ring-gray-300 ws-capitalize ws-w-full
     }
 
     .ws-btn-reload {
-        @apply rounded-lg bg-transparent px-2 py-1 text-sm font-semibold text-orange-600 dark:text-orange-500 shadow-sm hover:bg-orange-600 hover:text-orange-50 dark:hover:bg-orange-600 ring-1 ring-orange-600
+        @apply ws-rounded-lg ws-bg-transparent ws-px-2 ws-py-1 ws-text-sm ws-font-semibold ws-text-orange-600 dark:ws-text-orange-500 ws-shadow-sm hover:ws-bg-orange-600 hover:ws-text-orange-50 dark:hover:ws-bg-orange-600 ws-ring-1 ws-ring-orange-600
     }
 }

@@ -4,7 +4,7 @@ import {createRoot} from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-const prefix = import.meta.env.VITE_PREFIX ?? 'v4';
+const prefix = import.meta.env.VITE_PREFIX_VERSION ?? 'v4';
 
 if (typeof document !== 'undefined') {
     let container = document.getElementById(`webserial-${prefix}`);

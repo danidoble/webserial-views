@@ -56,7 +56,7 @@ export function Events() {
     }
 
     return (<>
-        <div className="fixed z-[60] bottom-4 right-4 grid gap-2">
+        <div className="ws-fixed ws-z-[60] ws-bottom-4 ws-right-4 ws-grid ws-gap-2">
             {alerts.map((alert, index) => (
                 <Alert key={`alert-ws-${index}`} message={alert.message} type={alert.type}/>
             ))}
@@ -76,7 +76,7 @@ function Alert({message, type}) {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="h-6 w-6 shrink-0 stroke-current">
+                className="ws-h-6 ws-w-6 ws-shrink-0 ws-stroke-current">
                 <path
                     strokeLinecap="round"
                     strokeLinejoin="round"

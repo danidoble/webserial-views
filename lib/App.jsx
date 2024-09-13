@@ -7,11 +7,11 @@ import {utils} from "webserial";
 export default function App() {
     useEffect(() => {
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            //document.documentElement.classList.add('dark')
-            document.documentElement.setAttribute('data-theme', 'sunset');
+            document.documentElement.classList.add('dark')
+            //document.documentElement.setAttribute('data-theme', 'sunset');
         } else {
-            //document.documentElement.classList.remove('dark')
-            document.documentElement.setAttribute('data-theme', 'emerald');
+            document.documentElement.classList.remove('dark')
+            //document.documentElement.setAttribute('data-theme', 'emerald');
         }
     }, []);
 

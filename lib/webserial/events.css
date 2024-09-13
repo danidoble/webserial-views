@@ -2,22 +2,22 @@
 
 @layer components {
     .ws-alert {
-        @apply rounded-2xl px-4 py-4 max-w-xs w-full text-sm font-medium shadow-sm inline-flex gap-2 items-center
+        @apply ws-rounded-2xl ws-px-4 ws-py-4 ws-max-w-xs ws-w-full ws-text-sm ws-font-medium ws-shadow-sm ws-inline-flex ws-gap-2 ws-items-center
     }
 
     .ws-alert-info {
-        @apply bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-white
+        @apply ws-bg-blue-100 dark:ws-bg-blue-800 ws-text-blue-800 dark:ws-text-white
     }
 
     .ws-alert-warning {
-        @apply bg-yellow-400 dark:bg-orange-500 text-yellow-900 dark:text-black
+        @apply ws-bg-yellow-400 dark:ws-bg-orange-500 ws-text-yellow-900 dark:ws-text-black
     }
 
     .ws-alert-error {
-        @apply bg-red-400 dark:bg-red-800 text-black dark:text-white
+        @apply ws-bg-red-400 dark:ws-bg-red-800 ws-text-black dark:ws-text-white
     }
 
     .ws-alert-success {
-        @apply bg-green-300 dark:bg-green-800 text-green-900 dark:text-white
+        @apply ws-bg-green-300 dark:ws-bg-green-800 ws-text-green-900 dark:ws-text-white
     }
 }
