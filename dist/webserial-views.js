@@ -1,5 +1,5 @@
 import Am, { useState as S0, useEffect as w0, StrictMode as E_ } from "react";
-import { Devices as Um, utils as bT } from "webserial";
+import { Devices as Um, utils as bT } from "@danidoble/webserial";
 function C_(z) {
   return z && z.__esModule && Object.prototype.hasOwnProperty.call(z, "default") ? z.default : z;
 }

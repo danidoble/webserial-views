@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import {Devices} from "webserial";
+import {Devices} from "@danidoble/webserial";
 import PropTypes from "prop-types";
 import './events.css'
 

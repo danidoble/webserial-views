@@ -1,4 +1,4 @@
-(function(yr,Li){typeof exports=="object"&&typeof module<"u"?Li(require("react"),require("webserial")):typeof define=="function"&&define.amd?define(["react","webserial"],Li):(yr=typeof globalThis<"u"?globalThis:yr||self,Li(yr.React,yr.WebSerial))})(this,function(yr,Li){"use strict";function kT(z){return z&&z.__esModule&&Object.prototype.hasOwnProperty.call(z,"default")?z.default:z}var jm={exports:{}},gf={};/**
+(function(yr,Li){typeof exports=="object"&&typeof module<"u"?Li(require("react"),require("@danidoble/webserial")):typeof define=="function"&&define.amd?define(["react","@danidoble/webserial"],Li):(yr=typeof globalThis<"u"?globalThis:yr||self,Li(yr.React,yr.WebSerial))})(this,function(yr,Li){"use strict";function kT(z){return z&&z.__esModule&&Object.prototype.hasOwnProperty.call(z,"default")?z.default:z}var jm={exports:{}},gf={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *

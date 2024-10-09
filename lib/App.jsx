@@ -2,7 +2,7 @@ import {useEffect} from "react";
 import {Permissions} from "./webserial/Permissions.jsx";
 import {Unsupported} from "./webserial/Unsupported.jsx";
 import {Events} from "./webserial/Events.jsx";
-import {utils} from "webserial";
+import {utils} from "@danidoble/webserial";
 
 export default function App() {
     useEffect(() => {

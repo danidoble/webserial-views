@@ -1,4 +1,4 @@
-import {utils} from "webserial";
+import {utils} from "@danidoble/webserial";
 import './unsupported.css';
 
 export function Unsupported() {
