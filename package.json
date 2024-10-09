@@ -1,7 +1,22 @@
 {
   "name": "@danidoble/webserial-views",
+  "description": "WebSerial views",
   "version": "0.0.1",
   "type": "module",
+  "license": "MIT",
+  "author": "danidoble",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danidoble/webserial-views.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danidoble/webserial-views/issues"
+  },
+  "homepage": "https://webserial-demo.danidoble.com",
+  "keywords": [
+    "webserial",
+    "views"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
