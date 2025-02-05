@@ -1,7 +1,7 @@
 {
   "name": "@danidoble/webserial-views",
   "description": "WebSerial views",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "author": "danidoble",
