@@ -17,9 +17,11 @@ If you are using react in your project, you can use like this
 import {BasicSerialViews} from "@danidoble/webserial-views/serial-views";
 import "@danidoble/webserial-views/dist/webserial-views.css";
 
+// ['system', 'dark', 'light']
+
 const App = () => {
     return (
-        <BasicSerialViews /> {/*This is the component that will render the views*/}
+        <BasicSerialViews theme={"system"} /> {/*This is the component that will render the views*/}
     );
 }
 ```

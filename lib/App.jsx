@@ -3,17 +3,26 @@ import {Permissions} from "./webserial/Permissions.jsx";
 import {Unsupported} from "./webserial/Unsupported.jsx";
 import {Events} from "./webserial/Events.jsx";
 import {utils} from "@danidoble/webserial";
+import PropTypes from "prop-types";
 
-export default function App() {
+App.propTypes = {
+    theme: PropTypes.oneOf(['system', 'dark', 'light'])
+}
+
+export default function App({theme = "system"} = {theme: "system"}) {
     useEffect(() => {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (theme === "system") {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+        } else if (theme === 'dark') {
             document.documentElement.classList.add('dark')
-            //document.documentElement.setAttribute('data-theme', 'sunset');
-        } else {
+        } else if (theme === 'light') {
             document.documentElement.classList.remove('dark')
-            //document.documentElement.setAttribute('data-theme', 'emerald');
         }
-    }, []);
+    }, [theme]);
 
     let isHttps = location.protocol === 'https:';
     const support = utils.supportWebSerial();
