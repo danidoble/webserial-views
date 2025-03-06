@@ -1,7 +1,7 @@
 {
   "name": "@danidoble/webserial-views",
   "description": "WebSerial views",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "license": "MIT",
   "author": "danidoble",
@@ -46,7 +46,7 @@
     "react-dom": "^19.0.0",
     "tailwindcss": "^3.4.17",
     "vite": "^6.2.0",
-    "@danidoble/webserial": "^4.1.6"
+    "@danidoble/webserial": "^4.1.7"
   },
   "files": [
     "dist"
