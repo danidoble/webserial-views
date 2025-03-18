@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./App-FVjvTfyo.cjs");exports.BasicSerialViews=e.App;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./App-BYgDPN2I.cjs");exports.BasicSerialViews=e.App;

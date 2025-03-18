@@ -5,12 +5,17 @@ import './permissions.css';
 export function Permissions() {
     const [devices, setDevices] = useState([]);
 
-    Devices.instance.on('change', () => {
-        poolDevices();
-    });
-
     useEffect(() => {
+      const fn = () => {
         poolDevices();
+      };
+      Devices.instance.on("change", fn);
+     
+      poolDevices();
+      
+      return () => {
+        Devices.instance.off("change", fn);
+      };
     }, []);
 
     function poolDevices() {

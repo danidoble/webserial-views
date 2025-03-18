@@ -1,4 +1,4 @@
-import { A as i } from "./App-8_KUD5Rg.js";
+import { A as i } from "./App-DgJwx2UC.js";
 export {
   i as BasicSerialViews
 };
